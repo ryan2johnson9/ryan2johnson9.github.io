@@ -1034,3 +1034,6 @@ nav#filter li {
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+section#carTable {
+	padding: 50px;
+}
