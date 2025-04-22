@@ -1034,6 +1034,12 @@ nav#filter li {
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.sky-background {
+	background-color: rgba(176, 196, 230, 0.8);
+	padding: 5px;
+	border-radius: 5px;
+
+}
 section#carTable {
 	padding: 50px;
 }
