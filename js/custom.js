@@ -121,28 +121,78 @@ var customScripts = {
 $('document').ready(function () {
     customScripts.init();
 	$('#diagram-id-1').diagram({ 
-			size: "190",
+			size: "210",
 			borderWidth: "10",
 			bgFill: "#95a5a6",
-			frFill: "#ffba00",
-			textSize: 54,
+			frFill: "#8d1205",
+			textSize: 30,
 			textColor: '#1a1a1a'
 		}); 
 		$('#diagram-id-2').diagram({ 
-			size: "190",
+			size: "210",
 			borderWidth: "10",
 			bgFill: "#95a5a6",
-			frFill: "#2ecc71",
-			textSize: 54,
+			frFill: "#3498db",
+			textSize: 30,
 			textColor: '#333'
 		});
 
 		$('#diagram-id-3').diagram({ 
-			size: "190",
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#2ecc71",
+			textSize: 30,
+			textColor: '#1a1a1a'
+		});
+        $('#diagram-id-4').diagram({ 
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#336791",
+			textSize: 30,
+			textColor: '#1a1a1a'
+		}); 
+		$('#diagram-id-5').diagram({ 
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#ffba00",
+			textSize: 30,
+			textColor: '#333'
+		});
+
+		$('#diagram-id-6').diagram({ 
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#D30001",
+			textSize: 30,
+			textColor: '#1a1a1a'
+		});
+        $('#diagram-id-7').diagram({ 
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#2ecc71",
+			textSize: 30,
+			textColor: '#1a1a1a'
+		}); 
+		$('#diagram-id-8').diagram({ 
+			size: "210",
+			borderWidth: "10",
+			bgFill: "#95a5a6",
+			frFill: "#ffba00",
+			textSize: 30,
+			textColor: '#333'
+		});
+
+		$('#diagram-id-9').diagram({ 
+			size: "210",
 			borderWidth: "10",
 			bgFill: "#95a5a6",
 			frFill: "#3498db",
-			textSize: 54,
+			textSize: 30,
 			textColor: '#1a1a1a'
 		});
 		$(window).load(function() { 

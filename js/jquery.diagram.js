@@ -73,6 +73,7 @@ var defaults = {
 
 		var $this = $(this);
 		var dataAttr = $this.data("percent");
+		var innerText = $this.data("inner-text");
 		var data = parseFloat(dataAttr);
 
 		var cssMain = {
@@ -95,7 +96,9 @@ var defaults = {
 		};
 
 		$this.css(cssMain);
-		
+		if(typeof(innerText) === 'undefined'){
+			innerText = dataAttr;
+		}
 		var text = $('<span></span>')
 			.appendTo($this)
 			.css({
@@ -109,7 +112,7 @@ var defaults = {
 				"line-height": options.size+"px",
 				"color": options.textColor
 			})
-			.text(dataAttr);
+			.text(innerText);
 		
 		var bg = $('<div></div>')
 			.appendTo($this)
