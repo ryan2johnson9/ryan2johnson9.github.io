@@ -1,0 +1,67 @@
+<!-- contact.html -->
+<section id="contactUs" class="page-section secPad">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          const exxz = "Ff";
+          const bzdfg = "fz";
+          emailjs.init({
+            publicKey: bzdfg +"1CD8ufamYzvcw" + exxz,
+          });
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              const btn = document.getElementById('submit-btn');
+              const emResult = document.getElementById('email-result');
+              emResult.innerHTML = ""
+              btn.disabled = true;
+              btn.value = "Sending..."
+              event.preventDefault();
+              emailjs.sendForm('ryans_emailjs_27', 'template_q8eutxm', this)
+                  .then(() => {
+                      btn.disabled = false;
+                      btn.value = "Send";
+                      emResult.innerHTML = "<br><p>Message sent! I'll get back to you soon.</p>";
+                      console.log('SUCCESS!');
+                  }, (error) => {
+                      btn.disabled = false;
+                      btn.value = "Send";
+                      emResult.innerHTML = "<br><p>Failed to send :( Please email me at ryan2johnson9@gmail.com.</p>";
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+        <h2>Let's Keep In Touch!</h2>
+        <p>If you would like to get in contact, please fill out the form below:</p>
+      </div>
+    </div>
+    <div class="row mrgn30">
+      <form id="contact-form" role="form">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" required></textarea>
+          </div>
+          <input id="submit-btn" type="submit" class="btn btn-lg btn-primary" value="Send">
+          <div id="email-result" class="result"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

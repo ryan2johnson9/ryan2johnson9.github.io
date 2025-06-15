@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.demo {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cta {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+/* Contact Form Section */
+#contactUs {
+    background: linear-gradient(135deg, #ffffff, #e3e3e3);
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Container Refinements */
+#contactUs .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading Styles */
+#contactUs .heading h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contactUs .heading p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Hide Labels for a Cleaner Look */
+label {
+    display: none !important;
+}
+
+/* Contact Form Layout */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Form Fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px; /* Adds spacing */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    transition: border 0.3s;
+}
+
+/* Improve Text Field Focus Effect */
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Message Field */
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Submit Button */
+#submit-btn {
+    background: #007bff;
+    font-size: 18px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#submit-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Email Result Message */
+#email-result p {
+    font-size: 16px;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #contactUs .container {
+        max-width: 95%;
+    }
+
+    .form-group {
+        min-width: 100%;
+    }
+}
