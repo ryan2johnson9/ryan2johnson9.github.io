@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan’s Voice-Over Demos</title>
+    <title>Ryan Johnson Voice-Over Demos</title>
     <link rel="stylesheet" href="css/voice_styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="./js/emailjs_init.js"></script>
+    <script type="text/javascript" src="./js/emailjs_function.js"></script>
 </head>
 <body>
-    <header style="text-align:center">
-        <h1>Ryan’s Voice-Over Demos</h1>
-        <p>Listen to professional voice-over samples below!</p>
+    <header>
+        <h1>Ryan Johnson Voice-Over Demos</h1>
+        <p>
+            <b>Listen</b> to my demos below and <b>reach out</b> via the contact form if you like what you hear.
+            <button id="about-toggle">About Me...</button>
+        </p>
+        <div id="about-container">
+            <div id="about-content" style="display: none;">
+                <p>Hi, I'm Ryan Johnson!</p>
+                <p>I'm passionate about voice-over work, bringing scripts to life with authenticity and creativity. 
+                Whether it's commercial, narration, or character voices, I love crafting the perfect sound. Feel free to explore my demos below, 
+                and don't hesitate to reach out!</p>
+                <p>(BTW I'm also a web developer)</p>
+            </div>
+        </div>
     </header>
-
     <main>
-        <section class="demo" style="text-align:center">
+        <section class="demo">
             <h2>Uplifting</h2>
             <video controls width="640" loop>
                 <source src="video/Young_Child_In_Flowers.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
+
         <section class="demo">
             <h2>Voice with Guitar</h2>
             <audio controls>
@@ -28,24 +43,39 @@
             </audio>
         </section>
 
-        <!-- <section class="demo">
+        <section class="demo">
             <h2>Character Demo</h2>
             <audio controls>
                 <source src="demo2.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-        </section> -->
-
-        <div id="contact-container"></div>
-        <script>
-          fetch("contact.html")
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById("contact-container").innerHTML = data;
-            })
-            .catch(error => console.error("Error loading contact section:", error));
-        </script>
+        </section>
     </main>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  </body>
+
+    <section id="contactUs">
+        <div class="contact-container">
+            <h2>Let's Keep In Touch!</h2>
+            <p>If you'd like to reach out, please fill out the form below:</p>
+
+            <form id="contact-form">
+                <input type="hidden" name="time" value="Mar 10 2025 08:46">
+                
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <textarea name="message" id="comments" rows="5" placeholder="Your Message…" required></textarea>
+                </div>
+                
+                <input id="submit-btn" type="submit" class="button" value="Send">
+                <div id="email-result"></div>
+            </form>
+        </div>
+    </section>
+</body>
 </html>

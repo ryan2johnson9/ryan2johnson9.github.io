@@ -348,41 +348,8 @@
 <!--Contact -->
 <section id="contactUs" class="page-section secPad">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function() {
-          const exxz = "Ff";
-          const bzdfg = "fz";
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init({
-            publicKey: bzdfg +"1CD8ufamYzvcw" + exxz,
-          });
-      })();
-  </script>
-  <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-              const btn = document.getElementById('submit-btn');
-              const emResult = document.getElementById('email-result');
-              emResult.innerHTML = ""
-              btn.disabled = true;
-              btn.value = "Sending..."
-              event.preventDefault();
-              // these IDs from the previous steps
-              emailjs.sendForm('ryans_emailjs_27', 'template_q8eutxm', this)
-                  .then(() => {
-                      btn.disabled = false;
-                      btn.value = "Send";
-                      emResult.innerHTML = "<br><p>Message sent! I'll get back to you soon.</p>"
-                      console.log('SUCCESS!');
-                  }, (error) => {
-                      btn.disabled = false;
-                      btn.value = "Send"
-                      emResult.text = "<br><p>Failed to send :( Sorry, instead, please just email me at ryan2johnson9@gmail.com<p>"
-                      console.log('FAILED...', error);
-                  });
-          });
-      }
-  </script>
+  <script type="text/javascript" src="./js/emailjs_init.js"></script>
+  <script type="text/javascript" src="./js/emailjs_function.js"></script>
   <div class="container">
     <div class="row">
       <div class="heading"> 
